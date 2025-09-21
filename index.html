@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendo Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Your existing CSS remains the same */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --gray: #7f8c8d;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* ... rest of your CSS ... */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Your existing HTML structure remains the same -->
+    </div>
+
+    <script>
+        // Your JavaScript code remains mostly the same
+        
+        // Added deployment helper function
+        function showDeploymentHelp() {
+            alert("To deploy this application online:\n\n1. Create an account on Netlify, Vercel, or GitHub\n2. Upload this HTML file to your account\n3. Follow their deployment instructions\n4. Consider getting a domain name from providers like Namecheap ($5-10/year)");
+        }
+        
+        // Added deployment info section to your HTML
+        const deploymentSection = `
+            <div style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 5px; text-align: center;">
+                <h3><i class="fas fa-cloud-upload-alt"></i> Ready to Deploy Online</h3>
+                <p>This application can be hosted online with minimal costs</p>
+                <button class="btn btn-primary" onclick="showDeploymentHelp()" style="margin-top: 10px;">
+                    <i class="fas fa-info-circle"></i> Deployment Instructions
+                </button>
+            </div>
+        `;
+        
+        // Add deployment section to login page
+        document.getElementById('loginSection').querySelector('.auth-container').innerHTML += deploymentSection;
+    </script>
+</body>
+</html>
